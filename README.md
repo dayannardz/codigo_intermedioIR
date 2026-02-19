@@ -11,8 +11,8 @@ Beneficios de la Optimización mediante el Código Intermedio
 
 El uso del código intermedio permite aplicar múltiples optimizaciones antes de que el programa sea traducido a instrucciones específicas del procesador. Entre los principales beneficios se encuentran:
 
-  Eliminación de código muerto, donde se descartan instrucciones que no afectan el resultado final del programa.
-  Propagación de constantes, que sustituye variables por valores constantes cuando es posible, reduciendo operaciones innecesarias.
-  Simplificación de expresiones, mejorando el rendimiento y reduciendo el uso de recursos.
+  - Eliminación de código muerto, donde se descartan instrucciones que no afectan el resultado final del programa.
+  - Propagación de constantes, que sustituye variables por valores constantes cuando es posible, reduciendo operaciones innecesarias.
+  - Simplificación de expresiones, mejorando el rendimiento y reduciendo el uso de recursos.
 
 Estas optimizaciones hacen que el programa final sea más eficiente, rápido y adaptado al hardware sin perder la independencia de la arquitectura.
