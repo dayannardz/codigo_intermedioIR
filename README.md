@@ -1,6 +1,6 @@
-# Análisis del Código Intermedio (IR)
+Análisis del Código Intermedio (IR)
 
-## Introducción
+Introducción:
 En los compiladores modernos, el código fuente no se traduce directamente a código máquina.  
 Antes de llegar al hardware específico, el compilador genera una **representación intermedia (IR)** que facilita el análisis, la optimización y la portabilidad del programa.
 
@@ -9,8 +9,7 @@ En este repositorio se muestra un ejemplo sencillo en Java que ilustra:
 - El uso del IR para realizar optimizaciones.
 - Beneficios como la eliminación de código muerto y la propagación de constantes.
 
-
-## Generación de Código Intermedio
+Generación de Código Intermedio
 
 Después del **análisis semántico**, el compilador ya verificó que:
 - Las variables estén declaradas.
@@ -19,7 +18,7 @@ Después del **análisis semántico**, el compilador ya verificó que:
 
 Una vez validado esto, el código Java se traduce a una representación intermedia (IR), la cual es **independiente de la arquitectura del hardware**.
 
-### Código fuente original (Java)
+Código fuente original (Java)
 
 ```java
 int a = 5;
@@ -31,8 +30,7 @@ c = a + b;
 d = 20; // código muerto
 ```
 
-Representación Intermedia (IR)
-
+Representación Intermedia IR
 El compilador descompone las instrucciones en operaciones simples usando variables temporales:
 ```
 t1 = 5
