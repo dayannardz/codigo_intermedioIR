@@ -1,18 +1,32 @@
-Análisis del Código Intermedio
+Después del análisis semántico, el compilador ya verificó que las variables estén declaradas y que las operaciones sean válidas. En esta etapa, el código Java se traduce a una representación intermedia (IR), la cual es independiente del hardware.
+int a = 5;
+int b = 10;
+int c;
+int d;
 
-Este repositorio presenta un análisis del Código Intermedio (IR) y su importancia dentro del proceso de compilación, destacando su generación y los beneficios que aporta en la optimización del código.
+c = a + b;
+d = 20; // código muerto
 
-Generación de Código Intermedio
+Representación intermedia.
+t1 = 5
+a = t1
 
-La generación del código intermedio ocurre después del análisis semántico del programa. En esta etapa, el compilador ya ha verificado que el código fuente es correcto en términos de sintaxis y significado.
-El proceso consiste en traducir las estructuras del lenguaje de alto nivel a una representación intermedia más simple y uniforme. Esta representación no depende del hardware y permite describir las operaciones del programa de forma clara, facilitando tanto el análisis como las transformaciones posteriores antes de generar el código máquina final.
+t2 = 10
+b = t2
 
-Beneficios de la Optimización mediante el Código Intermedio
+t3 = a + b
+c = t3
 
-El uso del código intermedio permite aplicar múltiples optimizaciones antes de que el programa sea traducido a instrucciones específicas del procesador. Entre los principales beneficios se encuentran:
+t4 = 20
+d = t4
 
-  - Eliminación de código muerto, donde se descartan instrucciones que no afectan el resultado final del programa.
-  - Propagación de constantes, que sustituye variables por valores constantes cuando es posible, reduciendo operaciones innecesarias.
-  - Simplificación de expresiones, mejorando el rendimiento y reduciendo el uso de recursos.
+El código intermedio permite realizar optimizaciones antes de generar código máquina específico del hardware, mejorando el rendimiento del programa.
+Eliminación de Código Muerto: como la variable d no se utiliza, el compilador elimina las instrucciones asociadas.
+Antes de la optimización:
+a = 5
+b = 10
+c = a + b
+Después de la optimización:
+c = 15
 
-Estas optimizaciones hacen que el programa final sea más eficiente, rápido y adaptado al hardware sin perder la independencia de la arquitectura.
+Estas optimizaciones reducen operaciones innecesarias y hacen el código más eficiente.
